@@ -1,0 +1,37 @@
+[user]
+	name = Balfa
+	email = Balfa@users.noreply.github.com
+[merge]
+	tool = bc
+[mergetool]
+	keepbackup = false
+[alias]
+	adog = log --all --decorate --oneline --graph
+	bblame = log -p -M --follow --stat -- /x/git/Audit.Engagements/src/Audit.Domains.Preparations.Tests/Features/TaxTrialBalance/TaxTrialBalanceThens.cs
+	cne = commit --no-edit
+	cneaa = commit --no-edit -a --amend
+	dd = difftool --dir-diff
+
+	# the following section from https://stackoverflow.com/a/37083903/326110
+	hide = update-index --assume-unchanged
+	unhide = update-index --no-assume-unchanged
+	unhide-all = update-index --really-refresh
+	hidden = !git ls-files -v | grep \"^[a-z]\"
+	ignored = !git status -s --ignored | grep \"^!!\"
+
+	# From https://www.zainrizvi.io/blog/git-cheat-sheet/
+	lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(yellow)- %an%C(reset)%C(auto)%d%C(reset)'
+	lg1 = !git lg1-specific --all
+	lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(yellow)- %an%C(reset)'
+	lg2 = !git lg2-specific --all
+	lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(yellow)- %an <%ae> %C(reset) %C(yellow)(committer: %cn <%ce>)%C(reset)'
+	lg3 = !git lg3-specific --all
+	lg = !git lg1
+
+	# lsu = "list unchanged", as in: git update-index --assume-unchanged <file>
+	# to undo files assumed to be unchanged, do git update-index --no-assume-unchanged <file>
+	lsu = !git ls-files -v | grep '^[[:lower:]]' | cut -f2 -d' '
+	wipe-branches-safely = !git branch | grep -ve \" master$\" | xargs git branch -d
+	# wwil stands for "What Would I Lose". It shows all the things that I need to check before deleting my local clone of the repo.
+	wwil = !echo ::: STATUS ::: && git status && echo ::: BRANCH ::: && git branch && echo ::: STASH ::: && git stash list && echo ::: CLEAN '(ignores bin,obj,node_modules)' ::: && git clean -xdn | egrep -v '(/bin/|/obj/|node_modules/)'
+	root = rev-parse --show-toplevel
