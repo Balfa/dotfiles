@@ -1,6 +1,6 @@
 #!/bin/bash
 # install.sh - installs the dotfiles from this repository
-# usage: curl -sL https://raw.githubusercontent.com/Balfa/dotfiles/main/install.sh | cmd
+# usage: curl -sL https://raw.githubusercontent.com/Balfa/dotfiles/main/install.sh | bash
 # currently included in `post-install-first-steps.md`
 
 cd ~
