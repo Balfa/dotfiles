@@ -3,7 +3,7 @@ muh dotfiles
 
 # To install
 ```bash
-curl -sL https://raw.githubusercontent.com/Balfa/dotfiles/main/install.sh | cmd
+curl -sL https://raw.githubusercontent.com/Balfa/dotfiles/main/install.sh | bash
 ```
 
 # To test
