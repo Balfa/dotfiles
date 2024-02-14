@@ -3,7 +3,7 @@ export VISUAL="subl.exe --wait"
 export EDITOR="$VISUAL"
 # export KUBE_EDITOR="$VISUAL"
 
-# From https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/
+# From https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/#enable-shell-autocompletion
 # uncomment if you install kubectl (rancher desktop?)
 # source <(kubectl completion bash)
 # alias k=kubectl
