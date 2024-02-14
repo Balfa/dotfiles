@@ -2,7 +2,9 @@
 muh dotfiles
 
 # To install
-TODO
+```bash
+curl -sL https://raw.githubusercontent.com/Balfa/dotfiles/main/install.sh | cmd
+```
 
 # To test
 * `.gitconfig`
