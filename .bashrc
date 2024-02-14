@@ -4,9 +4,10 @@ export EDITOR="$VISUAL"
 # export KUBE_EDITOR="$VISUAL"
 
 # From https://kubernetes.io/docs/tasks/tools/included/optional-kubectl-configs-bash-linux/
-source <(kubectl completion bash)
-alias k=kubectl
-complete -o default -F __start_kubectl k
+# uncomment if you install kubectl (rancher desktop?)
+# source <(kubectl completion bash)
+# alias k=kubectl
+# complete -o default -F __start_kubectl k
 
 # bash parameter completion for the dotnet CLI (from https://docs.microsoft.com/en-us/dotnet/core/tools/enable-tab-autocomplete)
 _dotnet_bash_complete()
