@@ -1,0 +1,10 @@
+{
+    "workbench.startupEditor": "none",
+    "editor.fontFamily": "'CaskaydiaCove Nerd Font', Consolas, 'Courier New', monospace",
+    "shellcheck.customArgs": [
+        "-x"
+    ],
+    "editor.renderWhitespace": "all",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "editor.rulers": []
+}
