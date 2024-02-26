@@ -45,7 +45,12 @@ stty -ixon
 alias kubectl='kubectl.exe'
 alias minikube='minikube.exe'
 alias docker='docker.exe'
-alias az='az.cmd'
+# This actually causes problems!
+# az.cmd is specifically designed for use with cmd.exe.
+# There's a separate "az" beside it for bash (and further an az.ps1).
+# If I comment this line, it picks up "az" and uses it, without problems
+# See https://github.com/Azure/azure-cli/issues/9204#issuecomment-496204852 for more, though it doesn't give the exact workaround, it's what led me to figure that out
+# alias az=az.cmd
 
 alias cls='printf "\033c"'
 alias l='ls -al'
